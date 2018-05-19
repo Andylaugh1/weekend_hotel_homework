@@ -17,4 +17,16 @@ public abstract class Room {
     public int getNumberOfGuests(){
         return guests.size();
     }
+
+    public void addGuestToRoom(Guest guest){
+        guests.add(guest);
+    }
+
+    public void removeGuestFromRoom(Guest guest){
+        guests.remove(guest);
+    }
+
+    public void getRidOfAllGuests(){
+        guests.clear();
+    }
 }

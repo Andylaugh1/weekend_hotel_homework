@@ -9,9 +9,9 @@ public class Hotel {
 
     public Hotel(String name){
         this.name = name;
-        this.bedRooms = bedRooms;
-        this.diningRooms = diningRooms;
-        this.conferenceRooms = conferenceRooms;
+        this.bedRooms = new ArrayList<>();
+        this.diningRooms = new ArrayList<>();
+        this.conferenceRooms = new ArrayList<>();
     }
 
 
@@ -21,5 +21,25 @@ public class Hotel {
 
     public int getNumberOfBedrooms() {
         return this.bedRooms.size();
+    }
+
+    public int getNumberOfDiningRooms() {
+        return this.diningRooms.size();
+    }
+
+    public int getNumberOfConferenceRooms() {
+        return this.conferenceRooms.size();
+    }
+
+    public void addConferenceRoom(ConferenceRoom conferenceroom) {
+        this.conferenceRooms.add(conferenceroom);
+    }
+
+    public void addDiningRoom(DiningRoom diningRoom) {
+        this.diningRooms.add(diningRoom);
+    }
+
+    public void addBedRoom(Bedroom bedroom) {
+        this.bedRooms.add(bedroom);
     }
 }
