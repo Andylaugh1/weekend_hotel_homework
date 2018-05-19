@@ -42,4 +42,8 @@ public class Hotel {
     public void addBedRoom(Bedroom bedroom) {
         this.bedRooms.add(bedroom);
     }
+
+    public void checkInAGuest(Room room, Guest guest){
+        room.addGuestToRoom(guest);
+    }
 }
