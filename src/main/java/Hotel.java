@@ -46,4 +46,8 @@ public class Hotel {
     public void checkInAGuest(Room room, Guest guest){
         room.addGuestToRoom(guest);
     }
+
+    public String notifyReceptionist(Room room, Guest guest){
+        return room.notifyIfGuestCheckInOrNot(guest);
+    }
 }

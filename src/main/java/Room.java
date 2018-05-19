@@ -18,8 +18,23 @@ public abstract class Room {
         return guests.size();
     }
 
+    public boolean checkCapacity(){
+        if (getNumberOfGuests() < this.capacity)
+            return true;
+        else
+            return false;
+    }
+
     public void addGuestToRoom(Guest guest){
-        guests.add(guest);
+        if (checkCapacity() == true)
+            guests.add(guest);
+    }
+
+    public String notifyIfGuestCheckInOrNot(Guest guest){
+        if (checkCapacity() == true)
+            return "Guest has been checked in";
+        else
+            return "Guest cannot be checked in, room is full";
     }
 
     public void removeGuestFromRoom(Guest guest){

@@ -79,5 +79,15 @@ public class HotelTest {
         assertEquals(1, diningroom.getNumberOfGuests());
     }
 
+    @Test
+    public void cannotAddGuestCapacityFull(){
+        hotel.addBedRoom(bedroom);
+        hotel.checkInAGuest(bedroom, guest);
+        hotel.checkInAGuest(bedroom, guest1);
+        hotel.checkInAGuest(bedroom, guest2);
+        assertEquals("Guest cannot be checked in, room is full", hotel.notifyReceptionist(bedroom, guest2));
+        assertEquals(2, bedroom.getNumberOfGuests());
+    }
+
 
 }
