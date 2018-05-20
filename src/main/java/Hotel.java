@@ -54,4 +54,14 @@ public class Hotel {
     public Guest getRoomGuestList(Room room){
         return room.getGuestList();
     }
+
+    public void checkOutAGuest(Room room, Guest guest) {
+        room.removeGuestFromRoom(guest);
+    }
+
+    public void checkInGuestList(Room room, ArrayList guestlist) {
+        for (Object guest : guestlist) {
+            room.getGuests().add(guest);
+        }
+    }
 }

@@ -14,6 +14,10 @@ public abstract class Room {
         return this.capacity;
     }
 
+    public ArrayList getGuests(){
+        return this.guests;
+    }
+
     public int getNumberOfGuests(){
         return this.guests.size();
     }
