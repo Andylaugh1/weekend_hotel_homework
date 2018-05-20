@@ -118,5 +118,10 @@ public class HotelTest {
         assertEquals(3, bedroom.getNumberOfGuests());
     }
 
+    @Test
+    public void canSeeListOfVacantBedrooms(){
+        ArrayList emptyrooms = new ArrayList<Room>();
+    }
+
 
 }

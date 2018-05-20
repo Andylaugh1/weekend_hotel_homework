@@ -54,4 +54,11 @@ public abstract class Room {
     public void getRidOfAllGuests(){
         guests.clear();
     }
+
+    public boolean isRoomEmpty(){
+        if (getNumberOfGuests() == 0)
+            return true;
+        else
+            return false;
+    }
 }

@@ -67,5 +67,15 @@ public class BedroomTest {
         assertEquals(guest, bedroom.getGuestList());
     }
 
+    @Test
+    public void canCheckIfBedRoomIsEmptyTrue(){
+        assertEquals(true, bedroom.isRoomEmpty());
+    }
+
+    @Test
+    public void canCheckIfBedroomIsEmptyFalse(){
+        bedroom.addGuestToRoom(guest);
+        assertEquals(false, bedroom.isRoomEmpty());
+    }
 
 }
