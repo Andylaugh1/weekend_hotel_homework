@@ -50,4 +50,8 @@ public class Hotel {
     public String notifyReceptionist(Room room, Guest guest){
         return room.notifyIfGuestCheckInOrNot(guest);
     }
+
+    public Guest getRoomGuestList(Room room){
+        return room.getGuestList();
+    }
 }

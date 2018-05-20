@@ -15,7 +15,7 @@ public abstract class Room {
     }
 
     public int getNumberOfGuests(){
-        return guests.size();
+        return this.guests.size();
     }
 
     public boolean checkCapacity(){
@@ -23,6 +23,12 @@ public abstract class Room {
             return true;
         else
             return false;
+    }
+
+    public Guest getGuestList() {
+        for (Guest guest : this.guests) {
+            return guest; }
+        return null;
     }
 
     public void addGuestToRoom(Guest guest){
