@@ -133,8 +133,7 @@ public class HotelTest {
         hotel.addBedRoom(bedroom2);
         hotel.addBedRoom(bedroom3);
         hotel.checkInAGuest(bedroom3, guest);
-        hotel.findVacantBedRooms();
-        assertEquals(ArrayList<> emptyrooms(bedroom1, bedroom2), hotel.findVacantBedRooms());
+        assertEquals(2,  hotel.findVacantBedRooms().size());
     }
 
 
