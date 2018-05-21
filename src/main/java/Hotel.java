@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Hotel {
@@ -64,4 +65,22 @@ public class Hotel {
             room.getGuests().add(guest);
         }
     }
+
+    public ArrayList findVacantBedRooms() {
+        ArrayList emptyrooms = new ArrayList<Bedroom>();
+        for (Bedroom bedroom : this.bedRooms) {
+            if (bedroom.isRoomEmpty())
+                emptyrooms.add(bedroom);
+        }
+        return emptyrooms;
+    }
+
+//    public int getVacantRoomNumbers(){
+//        findVacantBedRooms();
+//        for (Bedroom bedroom : emptyrooms) {
+//            return bedroom.getRoomNumber();
+//        }
+//        return 0;
+//    }
+
 }

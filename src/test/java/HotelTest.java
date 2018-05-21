@@ -1,8 +1,10 @@
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 public class HotelTest {
@@ -120,7 +122,19 @@ public class HotelTest {
 
     @Test
     public void canSeeListOfVacantBedrooms(){
+        Bedroom bedroom1;
+        Bedroom bedroom2;
+        Bedroom bedroom3;
         ArrayList emptyrooms = new ArrayList<Room>();
+        bedroom1 = new Bedroom(2, RoomType.DOUBLE, 1);
+        bedroom2 = new Bedroom(5, RoomType.FAMILY, 2);
+        bedroom3 = new Bedroom(1, RoomType.SINGLE, 3);
+        hotel.addBedRoom(bedroom1);
+        hotel.addBedRoom(bedroom2);
+        hotel.addBedRoom(bedroom3);
+        hotel.checkInAGuest(bedroom3, guest);
+        hotel.findVacantBedRooms();
+        assertEquals(ArrayList<> emptyrooms(bedroom1, bedroom2), hotel.findVacantBedRooms());
     }
 
 
